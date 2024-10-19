@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/style.css" rel="stylesheet" />
+    <title>My test page</title>
+</head>
+
+<body>
+    <img src="images/image1.jpg" alt="Image of the city" />
+    <p>My cat is very grumpy</p> <!--Las etiquetas y el contenido, hace un elemento-->
+
+    <!--Es posible poner elementos dentro de otros, ANIDAMIENTO-->
+    <p>My cat is <strong>very</strong> grumpy.</p>
+
+    <!--Encabezados, titulos, subtitulos...-->
+    <!-- 4 heading levels: -->
+    <h1>Encabezados</h>
+        <h2>My top level heading</h2>
+        <h3>My subheading</h3>
+        <h4>My sub-subheading</h4>
+        <h5>My main title</h5>
+        <h6>My top level heading</h6>
+
+        <!--Parrafos-->
+        <h1>Parrafos</h1>
+        <p>This is a single paragraph .Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+        </p>
+
+        <h1>Listas</h1>
+        <p>
+            DE PARRAFO A LISTA<br>At Mozilla, we're a global community of technologists, thinkers, and builders
+            working together…
+        </p>
+
+        <p>At Mozilla, we're a global community of</p>
+        <ul><!--<ol> para listas ordenadas-->
+            <li>technologists</li>
+            <li>thinkers</li>
+            <li>builders</li>
+        </ul>
+        <p>working together…</p>
+
+        <h1>Enlaces</h1>
+        <a href="https://www.youtube.com">Youtube</a>
+
+        <button>Change user</button>
+
+        <!--El navegador lee el codigo en el orden que aparece en el archivo, si el JavaScript
+        se carga primero y se supone que afecta al HTML que aun no carga, puede haber problemas
+        Por eso se pone el enlace al JS al final, antes del cierre del <body>-->
+        <script src="scripts/main.js"></script>
+</body>
+
+</html>

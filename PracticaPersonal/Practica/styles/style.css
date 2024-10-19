@@ -1,0 +1,55 @@
+/*p {
+    color: red;
+    width: 500px;
+    border: 1px solid black;
+  }*/
+  
+/* LA ESTRUCTURA SE DENOMINA CONJUNTO DE REGLAS O REGLA JUSTA
+SELECTOR "elemento p" - DECLARACION "color:red" - Propiedad "color" - VALOR_PROPIEDAD "red"*/
+
+/*Seleccionar varios elementos y aplicar el mismo conjunto de reglas*/
+/*p,
+li,
+h1 {
+  color: red;
+}*/
+html {
+    font-size: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #00539f;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color: #00539f;
+    text-shadow: 3px 3px 1px black; /*Horizontal, Vertical, Dsenfoque, Color base*/
+}
+
+p,li {
+    font-size: 16px;
+    line-height: 2; /*Altura entre lineas*/
+    letter-spacing: 1px; /*Espaciado entre letras*/
+}
+
+/*Estilizar el cuerpo*/
+body {
+    width: 600px; /*Esto obliga a que el cuerpo tenga siempre 600 píxeles de ancho.*/
+    margin: 0 auto; /*El primer valor afecta parte sup e inf, el segundo valor izq y der, puede usar mas valores*/
+    background-color: #ff9500;
+    padding: 0 20px 20px 20px; /*Superior, Derechas, Inferior, Izquierda*/
+    border: 5px solid black; /*Ancho, Estilo, Color*/
+  }
+  
+  /*El <body> es un elemento de bloque, lo que significa que ocupa espacio en la página. El margen aplicado 
+  a un elemento de bloque será respetado por otros elementos de la página. Por el contrario, las imágenes son 
+  elementos en línea, para que el truco del margen automático funcione en esta imagen, debemos darle un comportamiento a 
+  nivel de bloque usando .display: block;*/
+  img {
+    width: 200px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+  }

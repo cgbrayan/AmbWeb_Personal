@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f8f9fa, #e0e0e0);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+    }
+    .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    }
+    .navbar a:hover {
+    background-color: #575757;
+    }
+
+    aside {
+        width: 200px;
+        background-color: #f4f4f4;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    aside h4 {
+        color: #333;
+    }
+
+    aside ul {
+       list-style-type: none;
+       padding: 0;
+    }
+
+    aside ul li {
+        margin-bottom: 10px;
+    }
+
+    aside ul li a{
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    aside ul li a:hover {
+        color: #e74c3c;
+    }
+
+    .productos {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .tarjeta-producto {
+        width: 250px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .tarjeta-producto img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .tarjeta-producto h3 {
+        color: #333;
+    }
+
+    .tarjeta-producto .precio {
+        color: #e74c3c;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    /*display: flex;: Al establecer display: flex; en el contenedor, se habilita el modelo de caja flexible (flexbox).
+    Esto permite que los elementos hijos directos (<aside> y <section class="main-content">)
+    se alineen horizontalmente (en una fila) de manera predeterminada.*/
+
+    /*Los elementos hijos de .container (es decir, el <aside> y el <section>) se alinean horizontalmente porque el modelo 
+    de flexbox aplica un flujo horizontal de manera predeterminada. Esto significa que los elementos dentro del contenedor 
+    se apilan uno al lado del otro, en lugar de uno encima del otro.*/
+    .container {
+        display: flex;
+    }
+
+    /*flex: 1;: Esto significa que el elemento <section> (.main-content) tomará todo el espacio disponible que quede después 
+    de que se haya asignado el espacio al <aside>. La propiedad flex en este caso es un shorthand para flex-grow, flex-shrink, 
+    y flex-basis. Al especificar flex: 1;, estás indicando que este elemento puede crecer para llenar el espacio restante, 
+    mientras que el <aside> ocupa su espacio fijo (en este caso, 200px de ancho).*/
+
+    /*flex-grow: Esta propiedad define la capacidad de un elemento para crecer en relación con el espacio disponible en el contenedor flex.
+    Por ejemplo, si tienes dos elementos con flex-grow: 1;, ambos crecerán igualmente para ocupar el espacio adicional. 
+    Si uno tiene flex-grow: 2; y el otro flex-grow: 1;, el primero ocupará el doble de espacio que el segundo.*/
+
+    /*flex-shrink: Define la capacidad de un elemento para reducirse cuando el espacio es limitado.
+    Por defecto, todos los elementos tienen un flex-shrink de 1, lo que significa que pueden reducirse para 
+    ajustarse al contenedor. Si se establece en 0, el elemento no se reducirá, incluso si hay poco espacio.*/
+
+    /*flex-basis: Esta propiedad establece el tamaño inicial de un elemento antes de que se apliquen flex-grow y flex-shrink.
+    Puedes pensar en flex-basis como el tamaño "base" que se le asigna al elemento antes de que el 
+    espacio adicional se distribuya o se reduzca. EN MI CASO YA DEFINI EL TAMANO EN EL EL CSS DEL CONTENIDO*/
+
+    .main-content {
+        flex: 1;
+    }

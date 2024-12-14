@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'db.php';
+
 function login($username, $password){
     try{
         global $pdo;
@@ -20,20 +21,4 @@ function login($username, $password){
         logError($e -> getMessage());
         return false;
     }
-}
-‎semana9/app-tareas/backend/login_test.php
-+15
-Original file line number	Diff line number	Diff line change
-@@ -0,0 +1,15 @@
-<?php
-require 'login.php';
-if(login('juanito2@gmail.com', '123456')){
-    echo 'Login Correcto' . PHP_EOL;
-}else{
-    echo 'Login incorrecto' . PHP_EOL;
-}
-if(login('juanito100@gmail.com', '55454545')){
-    echo 'Login correcto'. PHP_EOL;
-}else{
-    echo 'Login incorrecto'. PHP_EOL;
 }

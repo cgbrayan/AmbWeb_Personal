@@ -64,3 +64,26 @@ function eliminarTarea($id){
         return false;
     }
 }
+$method = $_SERVER['REQUEST_METHOD'];
+header('Content-Type: application/json');
+session_start();
+if(isset($_SESSION['user_id'])){
+    //el usuario tiene sesion
+    $user_id = $_SESSION['user_id'];
+    logDebug($user_id);
+    switch ($method) {
+        case 'GET':
+            //devolver las tareas del usuario conectado
+            $tareas = obtenerTareasPorUsuario($user_id);
+            echo json_encode($tareas);
+            break;
+        
+        default:
+            http_response_code(405);
+            echo json_encode(["error"=> "Metodo no permitido"]);
+            break;
+    }
+}else{
+    http_response_code(401);
+    echo json_encode(["error" => "Sesion no activa"]);
+}
